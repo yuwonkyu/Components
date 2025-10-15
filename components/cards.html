@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Components</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/cards.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Card Components</h1>
+      <p>다양한 정보를 표시하는 카드 레이아웃</p>
+    </header>
+
+    <main>
+      <section class="container">
+        <!-- Basic Cards -->
+        <div class="component-showcase">
+          <h3>기본 카드</h3>
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-header">
+                <h4>기본 카드</h4>
+              </div>
+              <div class="card-body">
+                <p>
+                  이것은 기본적인 카드 컴포넌트입니다. 헤더, 본문, 그리고
+                  선택적으로 푸터를 가질 수 있습니다.
+                </p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary">자세히 보기</button>
+              </div>
+            </div>
+
+            <div class="card card-shadow">
+              <div class="card-header">
+                <h4>그림자 카드</h4>
+              </div>
+              <div class="card-body">
+                <p>
+                  그림자 효과가 적용된 카드입니다. 더 입체적인 느낌을 줍니다.
+                </p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-secondary">확인</button>
+              </div>
+            </div>
+
+            <div class="card card-bordered">
+              <div class="card-header">
+                <h4>테두리 카드</h4>
+              </div>
+              <div class="card-body">
+                <p>
+                  강조된 테두리가 있는 카드입니다. 중요한 정보를 표시할 때
+                  사용합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Cards -->
+        <div class="component-showcase">
+          <h3>이미지 카드</h3>
+          <div class="cards-grid">
+            <div class="card image-card">
+              <div class="card-image">
+                <div class="placeholder-image">
+                  <span>📷</span>
+                  <p>이미지 영역</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4>이미지 카드</h4>
+                <p>
+                  상단에 이미지가 있는 카드입니다. 제품이나 포트폴리오 표시에
+                  적합합니다.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="card-tag">디자인</span>
+                <span class="card-date">2024.10.15</span>
+              </div>
+            </div>
+
+            <div class="card image-card horizontal">
+              <div class="card-image">
+                <div class="placeholder-image">
+                  <span>🖼️</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-body">
+                  <h4>가로형 이미지 카드</h4>
+                  <p>이미지가 왼쪽에 위치한 가로형 레이아웃입니다.</p>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-outline">더보기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Cards -->
+        <div class="component-showcase">
+          <h3>프로필 카드</h3>
+          <div class="cards-grid">
+            <div class="card profile-card">
+              <div class="profile-header">
+                <div class="profile-avatar">
+                  <span>👤</span>
+                </div>
+                <div class="profile-info">
+                  <h4>김개발자</h4>
+                  <p>Frontend Developer</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>HTML, CSS, JavaScript를 활용한 웹 개발 전문가입니다.</p>
+                <div class="profile-stats">
+                  <div class="stat">
+                    <span class="stat-number">42</span>
+                    <span class="stat-label">프로젝트</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-number">1.2K</span>
+                    <span class="stat-label">팔로워</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-number">89</span>
+                    <span class="stat-label">팔로잉</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary full-width">팔로우</button>
+              </div>
+            </div>
+
+            <div class="card profile-card compact">
+              <div class="profile-header compact">
+                <div class="profile-avatar small">
+                  <span>👩‍💻</span>
+                </div>
+                <div class="profile-info">
+                  <h5>이디자이너</h5>
+                  <p>UI/UX Designer</p>
+                </div>
+                <button class="btn btn-sm btn-outline">팔로우</button>
+              </div>
+              <div class="card-body">
+                <p>사용자 경험을 중시하는 디자이너입니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="component-showcase">
+          <h3>통계 카드</h3>
+          <div class="cards-grid stats-grid">
+            <div class="card stat-card primary">
+              <div class="stat-icon">📊</div>
+              <div class="stat-content">
+                <h3>1,234</h3>
+                <p>총 방문자</p>
+              </div>
+            </div>
+
+            <div class="card stat-card success">
+              <div class="stat-icon">💰</div>
+              <div class="stat-content">
+                <h3>₩567K</h3>
+                <p>월 매출</p>
+              </div>
+            </div>
+
+            <div class="card stat-card warning">
+              <div class="stat-icon">📈</div>
+              <div class="stat-content">
+                <h3>89%</h3>
+                <p>성장률</p>
+              </div>
+            </div>
+
+            <div class="card stat-card info">
+              <div class="stat-icon">👥</div>
+              <div class="stat-content">
+                <h3>456</h3>
+                <p>신규 가입자</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Cards -->
+        <div class="component-showcase">
+          <h3>인터랙티브 카드</h3>
+          <div class="cards-grid">
+            <div class="card interactive-card hover-lift">
+              <div class="card-body">
+                <h4>호버 리프트</h4>
+                <p>마우스를 올리면 위로 떠오르는 효과가 적용됩니다.</p>
+              </div>
+            </div>
+
+            <div class="card interactive-card hover-glow">
+              <div class="card-body">
+                <h4>호버 글로우</h4>
+                <p>마우스를 올리면 빛나는 효과가 나타납니다.</p>
+              </div>
+            </div>
+
+            <div class="card interactive-card tilt-effect">
+              <div class="card-body">
+                <h4>기울기 효과</h4>
+                <p>마우스를 올리면 3D 기울기 효과가 적용됩니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="component-showcase">
+          <h3>가격 카드</h3>
+          <div class="cards-grid pricing-grid">
+            <div class="card pricing-card">
+              <div class="pricing-header">
+                <h4>기본 플랜</h4>
+                <div class="price">
+                  <span class="currency">₩</span>
+                  <span class="amount">9,900</span>
+                  <span class="period">/월</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li>✓ 기본 기능</li>
+                  <li>✓ 이메일 지원</li>
+                  <li>✓ 5GB 저장공간</li>
+                  <li>✗ 고급 분석</li>
+                  <li>✗ 우선 지원</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline full-width">선택하기</button>
+              </div>
+            </div>
+
+            <div class="card pricing-card featured">
+              <div class="featured-badge">인기</div>
+              <div class="pricing-header">
+                <h4>프로 플랜</h4>
+                <div class="price">
+                  <span class="currency">₩</span>
+                  <span class="amount">19,900</span>
+                  <span class="period">/월</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li>✓ 모든 기본 기능</li>
+                  <li>✓ 우선 이메일 지원</li>
+                  <li>✓ 50GB 저장공간</li>
+                  <li>✓ 고급 분석</li>
+                  <li>✗ 24/7 지원</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary full-width">선택하기</button>
+              </div>
+            </div>
+
+            <div class="card pricing-card">
+              <div class="pricing-header">
+                <h4>엔터프라이즈</h4>
+                <div class="price">
+                  <span class="currency">₩</span>
+                  <span class="amount">39,900</span>
+                  <span class="period">/월</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li>✓ 모든 프로 기능</li>
+                  <li>✓ 24/7 전화 지원</li>
+                  <li>✓ 무제한 저장공간</li>
+                  <li>✓ 고급 분석</li>
+                  <li>✓ 전담 매니저</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-secondary full-width">문의하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <a href="../index.html" style="color: #667eea">← 메인으로 돌아가기</a>
+      </p>
+    </footer>
+  </body>
+</html>

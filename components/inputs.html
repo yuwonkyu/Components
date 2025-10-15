@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input & Form Components</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Input & Form Components</h1>
+      <p>다양한 폼 요소와 입력 컨트롤</p>
+    </header>
+
+    <main>
+      <section class="container">
+        <!-- Text Inputs -->
+        <div class="component-showcase">
+          <h3>텍스트 입력 필드</h3>
+          <div class="form-group">
+            <label for="text-input">기본 텍스트 입력</label>
+            <input
+              type="text"
+              id="text-input"
+              class="form-control"
+              placeholder="텍스트를 입력하세요"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email-input">이메일 입력</label>
+            <input
+              type="email"
+              id="email-input"
+              class="form-control"
+              placeholder="example@email.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password-input">비밀번호 입력</label>
+            <input
+              type="password"
+              id="password-input"
+              class="form-control"
+              placeholder="비밀번호"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="search-input">검색 입력</label>
+            <input
+              type="search"
+              id="search-input"
+              class="form-control search-input"
+              placeholder="검색어를 입력하세요"
+            />
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="component-showcase">
+          <h3>텍스트 영역</h3>
+          <div class="form-group">
+            <label for="textarea-basic">기본 텍스트 영역</label>
+            <textarea
+              id="textarea-basic"
+              class="form-control"
+              rows="4"
+              placeholder="여러 줄의 텍스트를 입력하세요"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="textarea-resizable">크기 조절 가능</label>
+            <textarea
+              id="textarea-resizable"
+              class="form-control resizable"
+              rows="3"
+              placeholder="우측 하단을 드래그하여 크기를 조절할 수 있습니다"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Select Boxes -->
+        <div class="component-showcase">
+          <h3>선택 박스</h3>
+          <div class="form-group">
+            <label for="select-basic">기본 선택 박스</label>
+            <select id="select-basic" class="form-control">
+              <option value="">옵션을 선택하세요</option>
+              <option value="option1">옵션 1</option>
+              <option value="option2">옵션 2</option>
+              <option value="option3">옵션 3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="select-multiple">다중 선택</label>
+            <select id="select-multiple" class="form-control" multiple>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="react">React</option>
+              <option value="vue">Vue.js</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Checkboxes and Radio Buttons -->
+        <div class="component-showcase">
+          <h3>체크박스와 라디오 버튼</h3>
+
+          <div class="form-section">
+            <h4>체크박스</h4>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox-input" />
+                <span class="checkmark"></span>
+                HTML
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox-input" checked />
+                <span class="checkmark"></span>
+                CSS
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox-input" />
+                <span class="checkmark"></span>
+                JavaScript
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>라디오 버튼</h4>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="experience"
+                  value="beginner"
+                  class="radio-input"
+                />
+                <span class="radio-mark"></span>
+                초보자
+              </label>
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="experience"
+                  value="intermediate"
+                  class="radio-input"
+                  checked
+                />
+                <span class="radio-mark"></span>
+                중급자
+              </label>
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="experience"
+                  value="advanced"
+                  class="radio-input"
+                />
+                <span class="radio-mark"></span>
+                고급자
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Range and File Inputs -->
+        <div class="component-showcase">
+          <h3>특수 입력 컨트롤</h3>
+
+          <div class="form-group">
+            <label for="range-input">범위 슬라이더</label>
+            <input
+              type="range"
+              id="range-input"
+              class="range-input"
+              min="0"
+              max="100"
+              value="50"
+            />
+            <div class="range-value">
+              값: <span id="range-display">50</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="file-input">파일 업로드</label>
+            <div class="file-input-wrapper">
+              <input type="file" id="file-input" class="file-input" multiple />
+              <label for="file-input" class="file-label">
+                <span class="file-icon">📁</span>
+                파일 선택 또는 드래그 & 드롭
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="color-input">색상 선택</label>
+            <input
+              type="color"
+              id="color-input"
+              class="color-input"
+              value="#667eea"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="date-input">날짜 선택</label>
+            <input type="date" id="date-input" class="form-control" />
+          </div>
+        </div>
+
+        <!-- Form Validation States -->
+        <div class="component-showcase">
+          <h3>폼 검증 상태</h3>
+
+          <div class="form-group">
+            <label for="valid-input">유효한 입력</label>
+            <input
+              type="text"
+              id="valid-input"
+              class="form-control valid"
+              value="올바른 입력값"
+            />
+            <div class="feedback success">✓ 올바른 형식입니다</div>
+          </div>
+
+          <div class="form-group">
+            <label for="invalid-input">잘못된 입력</label>
+            <input
+              type="email"
+              id="invalid-input"
+              class="form-control invalid"
+              value="invalid-email"
+            />
+            <div class="feedback error">✗ 올바른 이메일 형식이 아닙니다</div>
+          </div>
+
+          <div class="form-group">
+            <label for="warning-input">경고 상태</label>
+            <input
+              type="text"
+              id="warning-input"
+              class="form-control warning"
+              value="주의가 필요한 입력"
+            />
+            <div class="feedback warning">⚠ 권장되지 않는 형식입니다</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <a href="../index.html" style="color: #667eea">← 메인으로 돌아가기</a>
+      </p>
+    </footer>
+
+    <script>
+      // Range slider value display
+      const rangeInput = document.getElementById("range-input");
+      const rangeDisplay = document.getElementById("range-display");
+
+      rangeInput.addEventListener("input", function () {
+        rangeDisplay.textContent = this.value;
+      });
+    </script>
+  </body>
+</html>
