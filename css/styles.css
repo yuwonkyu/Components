@@ -172,13 +172,24 @@ h2 {
 footer {
   background-color: #333;
   color: white;
-  text-align: center;
   padding: 2rem 0;
   margin-top: 3rem;
 }
 
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 footer p {
   opacity: 0.8;
+  margin: 0;
 }
 
 /* Responsive Design */
