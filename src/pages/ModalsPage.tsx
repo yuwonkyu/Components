@@ -156,7 +156,7 @@ export function ModalsPage() {
   );
 
   return (
-    <main className="flex-1 p-8 bg-gradient-to-br from-primary-50 to-purple-100">
+    <main className="flex-1 p-8 bg-white">
       <ComponentShowcase title="모달 컴포넌트">
         {/* 기본 모달 섹션 */}
         <section className="component-section">

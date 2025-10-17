@@ -1,130 +1,109 @@
 import { Link } from "react-router-dom";
-import { cn } from "../utils/cn";
 
+/**
+ * 홈페이지 컴포넌트
+ * 컴포넌트 라이브러리의 메인 페이지로, 모든 컴포넌트들의 목록을 보여줍니다
+ * 위키백과 스타일의 심플한 디자인을 사용합니다
+ */
 export default function Home() {
+  // 사용 가능한 컴포넌트들의 목록과 설명
   const components = [
     {
       name: "버튼",
       path: "/buttons",
-      icon: "🔘",
-      description: "다양한 버튼 스타일",
+      description: "다양한 버튼 스타일과 상태를 보여주는 컴포넌트입니다.",
     },
     {
       name: "카드",
       path: "/cards",
-      icon: "🃏",
-      description: "카드 레이아웃 컴포넌트",
+      description: "정보를 담는 카드 레이아웃 컴포넌트입니다.",
     },
     {
       name: "입력 양식",
       path: "/inputs",
-      icon: "📝",
-      description: "폼 입력 컴포넌트",
+      description: "사용자 입력을 받는 폼 요소들입니다.",
     },
     {
       name: "타이포그래피",
       path: "/typography",
-      icon: "✍️",
-      description: "텍스트 스타일링",
+      description: "텍스트 스타일링과 타이포그래피 요소들입니다.",
     },
     {
       name: "네비게이션",
       path: "/navigation",
-      icon: "🧭",
-      description: "네비게이션 요소",
+      description: "웹사이트 탐색을 위한 네비게이션 컴포넌트입니다.",
     },
     {
-      name: "모달 & 오버레이",
+      name: "모달",
       path: "/modals",
-      icon: "🪟",
-      description: "모달 및 오버레이",
+      description: "팝업과 오버레이 형태의 모달 컴포넌트입니다.",
     },
     {
       name: "애니메이션",
       path: "/animations",
-      icon: "✨",
-      description: "애니메이션 효과",
-    },
-    {
-      name: "그리드",
-      path: "/grids",
-      icon: "🔲",
-      description: "그리드 레이아웃",
+      description: "사용자 경험을 향상시키는 동적 효과들입니다.",
     },
   ];
 
   return (
-    <main className="flex-1 p-8 bg-gradient-to-br from-primary-50 to-purple-100">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-secondary-800 mb-4">
-            🎨 컴포넌트 라이브러리
-          </h2>
-          <p className="text-lg text-secondary-600">
-            모던하고 반응형인 UI 컴포넌트들을 탐색해보세요
+    <main className="flex-1 p-8 bg-white">
+      <div className="max-w-4xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-normal text-black mb-4 border-b border-gray-300 pb-2">
+            컴포넌트 라이브러리
+          </h1>
+          <p className="text-base text-gray-700 leading-relaxed">
+            이 라이브러리는 재사용 가능한 UI 컴포넌트들을 제공합니다. 각
+            컴포넌트는 다양한 변형과 사용 예제를 포함하고 있습니다.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {components.map((component) => (
-            <Link
-              key={component.name}
-              to={component.path}
-              className={cn(
-                "bg-white rounded-xl p-6 shadow-lg hover:shadow-xl",
-                "transition-all duration-300 hover:-translate-y-2",
-                "border border-secondary-200 hover:border-primary-300",
-                "group cursor-pointer"
-              )}
-            >
-              <div className="text-center">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {component.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-secondary-800 mb-2">
-                  {component.name}
-                </h3>
-                <p className="text-secondary-600 text-sm">
-                  {component.description}
-                </p>
+        <div className="space-y-6">
+          <h2 className="text-xl font-normal text-black border-b border-gray-200 pb-1 mb-4">
+            컴포넌트 목록
+          </h2>
+
+          <div className="space-y-4">
+            {components.map((component) => (
+              <div
+                key={component.path}
+                className="border-b border-gray-100 pb-4"
+              >
+                <Link
+                  to={component.path}
+                  className="block hover:bg-gray-50 p-4 -m-4 rounded transition-colors"
+                >
+                  <h3 className="text-lg font-normal text-blue-600 hover:underline mb-1">
+                    {component.name}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {component.description}
+                  </p>
+                </Link>
               </div>
-            </Link>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="mt-16 bg-white rounded-xl p-8 shadow-lg">
-          <h3 className="text-2xl font-bold text-secondary-800 mb-6 text-center">
-            🚀 주요 특징
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-3xl mb-3">⚡</div>
-              <h4 className="font-semibold text-secondary-800 mb-2">
-                빠른 성능
-              </h4>
-              <p className="text-secondary-600 text-sm">
-                최적화된 React 컴포넌트로 빠른 렌더링
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-3">📱</div>
-              <h4 className="font-semibold text-secondary-800 mb-2">
-                반응형 디자인
-              </h4>
-              <p className="text-secondary-600 text-sm">
-                모든 디바이스에서 완벽하게 작동
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-3">🎨</div>
-              <h4 className="font-semibold text-secondary-800 mb-2">
-                커스터마이징
-              </h4>
-              <p className="text-secondary-600 text-sm">
-                Tailwind CSS로 쉽게 스타일 변경 가능
-              </p>
-            </div>
-          </div>
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <h2 className="text-lg font-normal text-black mb-3">기술 스택</h2>
+          <p className="text-sm text-gray-600 leading-relaxed mb-4">
+            이 컴포넌트 라이브러리는 다음 기술들로 구현되었습니다:
+          </p>
+          <ul className="text-sm text-gray-600 space-y-1 ml-4">
+            <li>
+              • <strong>React 18</strong> - 사용자 인터페이스 구축
+            </li>
+            <li>
+              • <strong>TypeScript</strong> - 타입 안전성
+            </li>
+            <li>
+              • <strong>Tailwind CSS</strong> - 유틸리티 기반 스타일링
+            </li>
+            <li>
+              • <strong>Zustand</strong> - 상태 관리
+            </li>
+          </ul>
         </div>
       </div>
     </main>

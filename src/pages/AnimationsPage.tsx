@@ -13,7 +13,7 @@ export function AnimationsPage() {
   };
 
   return (
-    <main className="flex-1 p-8 bg-gradient-to-br from-primary-50 to-purple-100">
+    <main className="flex-1 p-8 bg-white">
       <ComponentShowcase title="애니메이션 컴포넌트">
         {/* 로딩 애니메이션 섹션 */}
         <section className="component-section">

@@ -1,50 +1,73 @@
+/* Tailwind CSS 기본 스타일 가져오기 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom component styles with Tailwind */
+/* 위키백과 스타일의 심플한 컴포넌트 클래스들 */
 @layer components {
+  /* 컴포넌트 섹션 - 각 섹션 사이의 여백 설정 */
+  .component-section {
+    @apply mb-8;
+  }
+
+  /* 컴포넌트 섹션 제목 - 위키백과 스타일의 제목 */
+  .component-section-title {
+    @apply text-xl font-normal text-black border-b border-gray-200 pb-1 mb-4;
+  }
+
+  /* 컴포넌트 그리드 - 컴포넌트들을 배치하는 컨테이너 */
+  .component-grid {
+    @apply mb-6;
+  }
+
+  /* 컴포넌트 카드 - 각 컴포넌트를 감싸는 카드 스타일 */
+  .component-card {
+    @apply bg-white border border-gray-200 rounded p-6 mb-4;
+  }
+
+  /* 기본 버튼 스타일 - 모든 버튼의 기본이 되는 클래스 */
   .btn-base {
-    @apply inline-block px-6 py-3 text-base font-medium text-center no-underline border-2 border-transparent rounded-md cursor-pointer transition-all duration-300 ease-in-out font-sans whitespace-nowrap;
+    @apply inline-block px-4 py-2 text-sm font-normal text-center no-underline border border-gray-300 rounded cursor-pointer transition-colors duration-200 font-sans;
   }
 
+  /* 주요 버튼 - 파란색 배경의 중요한 액션용 버튼 */
   .btn-primary {
-    @apply btn-base bg-gradient-to-br from-primary-500 to-purple-600 text-white border-primary-500 hover:from-primary-600 hover:to-purple-700 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/40 active:translate-y-0;
+    @apply btn-base bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700;
   }
 
+  /* 보조 버튼 - 회색 배경의 일반적인 액션용 버튼 */
   .btn-secondary {
-    @apply btn-base bg-secondary-500 text-white border-secondary-500 hover:bg-secondary-600 hover:border-secondary-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary-500/40 active:translate-y-0;
+    @apply btn-base bg-gray-500 text-white border-gray-500 hover:bg-gray-600 hover:border-gray-600;
   }
 
+  /* 외곽선 버튼 - 배경이 투명하고 테두리만 있는 버튼 */
   .btn-outline {
-    @apply btn-base bg-transparent text-primary-500 border-primary-500 hover:bg-primary-500 hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/30 active:translate-y-0;
+    @apply btn-base bg-transparent text-blue-600 border-blue-600 hover:bg-blue-50;
   }
 
-  .btn-small {
-    @apply px-4 py-2 text-sm;
-  }
-
-  .btn-large {
-    @apply px-8 py-4 text-lg;
-  }
-
-  .card-base {
-    @apply bg-white rounded-xl overflow-hidden transition-all duration-300 ease-in-out relative;
-  }
-
-  .card-shadow {
-    @apply shadow-md;
-  }
-
-  .card-hover {
-    @apply hover:-translate-y-2 hover:shadow-xl;
-  }
-
+  /* 폼 입력 필드 - 텍스트 입력, 이메일, 패스워드 등에 사용 */
   .form-input {
-    @apply w-full px-3 py-3 text-base leading-6 text-secondary-700 bg-white border-2 border-secondary-200 rounded-md transition-all duration-300 ease-in-out font-sans focus:outline-none focus:border-primary-500 focus:shadow-sm focus:shadow-primary-500/10 hover:border-secondary-300;
+    @apply w-full px-3 py-2 text-sm leading-normal text-gray-900 bg-white border border-gray-300 rounded font-sans focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500;
   }
 
-  .component-preview-mini {
-    @apply h-16 flex items-center justify-center gap-2 mb-4 bg-secondary-50 rounded-lg relative overflow-hidden;
+  /* 텍스트에어리어 크기 조절 옵션들 */
+  /* 가로/세로 모두 조절 가능 - 기본 동작 */
+  .resize-both {
+    resize: both;
+  }
+
+  /* 세로 크기만 조절 가능 - 레이아웃 유지하면서 높이만 조절 */
+  .resize-y {
+    resize: vertical;
+  }
+
+  /* 가로 크기만 조절 가능 - 높이는 고정하고 너비만 조절 */
+  .resize-x {
+    resize: horizontal;
+  }
+
+  /* 크기 조절 불가 - 완전히 고정된 크기 */
+  .resize-none {
+    resize: none;
   }
 }

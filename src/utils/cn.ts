@@ -1,22 +1,39 @@
 import clsx from "clsx";
 
-// Tailwind CSS 클래스를 조건부로 합치는 유틸리티 함수
+/**
+ * Tailwind CSS 클래스를 조건부로 합치는 유틸리티 함수
+ * clsx 라이브러리를 래핑하여 사용
+ * @param inputs - 합칠 클래스 이름들 (문자열, undefined, null, false 가능)
+ * @returns 합쳐진 클래스 문자열
+ */
 export function cn(...inputs: (string | undefined | null | false)[]): string {
   return clsx(inputs);
 }
 
-// 타입 정의
+// ===============================
+// 컴포넌트별 타입 정의
+// ===============================
+
+/** 버튼 스타일 변형 타입 */
 type ButtonVariant =
-  | "primary"
-  | "secondary"
-  | "outline"
-  | "success"
-  | "warning"
-  | "danger"
-  | "info";
+  | "primary" // 주요 액션 (파란색)
+  | "secondary" // 보조 액션 (회색)
+  | "outline" // 외곽선만 (투명 배경)
+  | "success" // 성공 (초록색)
+  | "warning" // 경고 (노란색)
+  | "danger" // 위험 (빨간색)
+  | "info"; // 정보 (청록색)
+
+/** 버튼 크기 타입 */
 type ButtonSize = "small" | "default" | "large";
+
+/** 카드 스타일 변형 타입 */
 type CardVariant = "default" | "shadow" | "bordered";
+
+/** 입력 필드 상태 타입 */
 type InputState = "default" | "valid" | "invalid" | "warning";
+
+/** 배지 스타일 변형 타입 */
 type BadgeVariant =
   | "primary"
   | "success"
@@ -24,6 +41,8 @@ type BadgeVariant =
   | "danger"
   | "info"
   | "secondary";
+
+/** 배지 크기 타입 */
 type BadgeSize = "small" | "default" | "large";
 
 interface ButtonVariantsProps {

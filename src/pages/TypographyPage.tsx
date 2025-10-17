@@ -2,7 +2,7 @@ import { ComponentShowcase } from "../components/ComponentShowcase";
 
 export function TypographyPage() {
   return (
-    <main className="flex-1 p-8 bg-gradient-to-br from-primary-50 to-purple-100">
+    <main className="flex-1 p-8 bg-white">
       <ComponentShowcase title="텍스트 & 타이포그래피 컴포넌트">
         {/* 헤딩 섹션 */}
         <section className="component-section">

@@ -23,7 +23,7 @@ export function NavigationPage() {
   ];
 
   return (
-    <main className="flex-1 p-8 bg-gradient-to-br from-primary-50 to-purple-100">
+    <main className="flex-1 p-8 bg-white">
       <ComponentShowcase title="네비게이션 컴포넌트">
         {/* 네비게이션 바 섹션 */}
         <section className="component-section">

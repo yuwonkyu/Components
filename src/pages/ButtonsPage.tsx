@@ -1,9 +1,13 @@
 import { ComponentShowcase } from "../components/ComponentShowcase";
 import { buttonVariants } from "../utils/cn";
 
+/**
+ * 버튼 컴포넌트 페이지
+ * 다양한 버튼 스타일, 크기, 상태를 보여주는 데모 페이지
+ */
 export default function ButtonsPage() {
   return (
-    <main className="flex-1 p-8 bg-gradient-to-br from-primary-50 to-purple-100">
+    <main className="flex-1 p-8 bg-white">
       <ComponentShowcase title="버튼 컴포넌트">
         <section className="component-section">
           <h3 className="component-section-title">기본 버튼</h3>

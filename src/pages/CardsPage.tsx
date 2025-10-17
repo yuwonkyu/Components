@@ -3,7 +3,7 @@ import { cardVariants } from "../utils/cn";
 
 export default function CardsPage() {
   return (
-    <main className="flex-1 p-8 bg-gradient-to-br from-primary-50 to-purple-100">
+    <main className="flex-1 p-8 bg-white">
       <ComponentShowcase title="카드 컴포넌트">
         <section className="component-section">
           <h3 className="component-section-title">기본 카드</h3>

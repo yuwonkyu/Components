@@ -1,5 +1,10 @@
+// React Router 관련 임포트
 import { Routes, Route } from "react-router-dom";
+
+// 레이아웃 컴포넌트
 import Layout from "./components/Layout";
+
+// 페이지 컴포넌트들
 import Home from "./pages/Home";
 import ButtonsPage from "./pages/ButtonsPage";
 import InputsPage from "./pages/InputsPage";
@@ -10,6 +15,10 @@ import { ModalsPage } from "./pages/ModalsPage";
 import { AnimationsPage } from "./pages/AnimationsPage";
 import ComingSoonPage from "./pages/ComingSoonPage";
 
+/**
+ * 메인 앱 컴포넌트
+ * React Router를 사용하여 페이지 라우팅을 설정합니다
+ */
 function App() {
   return (
     <Routes>
