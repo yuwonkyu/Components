@@ -50,11 +50,12 @@ export default function Home() {
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-normal text-black mb-4 border-b border-gray-300 pb-2">
-            컴포넌트 라이브러리
+            UI 컴포넌트 가이드
           </h1>
           <p className="text-base text-gray-700 leading-relaxed">
-            이 라이브러리는 재사용 가능한 UI 컴포넌트들을 제공합니다. 각
-            컴포넌트는 다양한 변형과 사용 예제를 포함하고 있습니다.
+            이 가이드는 재사용 가능한 사용자 인터페이스(UI) 컴포넌트들을
+            대화형으로 보여줍니다. 각 컴포넌트의 다양한 변형과 사용 예제를
+            확인할 수 있습니다.
           </p>
         </div>
 

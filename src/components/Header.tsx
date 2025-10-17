@@ -4,8 +4,8 @@ interface HeaderProps {
 }
 
 export default function Header({ title, subtitle }: HeaderProps) {
-  const defaultTitle = "컴포넌트 라이브러리";
-  const defaultSubtitle = "재사용 가능한 UI 컴포넌트 문서";
+  const defaultTitle = "UI 컴포넌트 가이드";
+  const defaultSubtitle = "사용자 인터페이스 컴포넌트 참고 문서";
 
   return (
     <header className="bg-white border-b border-gray-200 py-4 mb-8">
